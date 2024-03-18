@@ -1,0 +1,6 @@
+streamlit
+pandas
+fastapi
+openai
+torch torchvision torchaudio
+transformers
