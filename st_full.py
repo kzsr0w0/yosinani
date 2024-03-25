@@ -73,10 +73,30 @@ if st.button('相談'):
     st.write(converted_text)
 
     #名言
-    f = open('名言.txt','r',encoding='UTF-8')
-    meigenn_list = f.readlines()
-    meigenn = random.choice(meigenn_list)
-    st.write('今日の名言は「',meigenn,'」です')
+    #meigenn_list = f.readlines()
+    #meigenn = random.choice(meigenn_list)
+    #st.write('今日の名言は「',meigenn,'」です')
+
+    #ヤタベザウルス表示
+    image = "./image1.png"
+    image2 = "./image2.png"
+    col1, col2 = st.columns(2)
+
+    with col1:
+        #名言
+        f = open('名言.txt','r',encoding='UTF-8')
+        meigenn_list = f.readlines()
+        meigenn = random.choice(meigenn_list)
+        st.write('今日のM名言は「',meigenn,'」です')
+        st.image(image, width=250)
+        
+    with col2:
+        #y名言
+        f = open('y_名言.txt','r',encoding='UTF-8')
+        meigenn_list = f.readlines()
+        meigenn = random.choice(meigenn_list)
+        st.write('今日のY名言は「',meigenn,'」です')
+        st.image(image2, width=250)
 
     # 最後の挨拶
     g = open('最後の挨拶.txt','r',encoding='UTF-8')
@@ -94,3 +114,6 @@ if st.button('相談'):
     squat_count = get_random_squat_count()
     # 画面に表示
     st.write(f"P.S.本日は片足：{squat_count}回のブルガリアンスクワットをします")
+
+        
+    
